@@ -3,109 +3,826 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenawei Safaris</title>
+    <meta name="description" content="Lenawei Safaris - Your Complete Travel & Tourism Partner. Book flights, trains, ships, safaris, hotels, and airport transfers.">
+    <meta name="keywords" content="Safari, Travel, Tourism, Kenya, Flights, Hotels, Tours, Adventure">
+    <meta name="author" content="Lenawei Safaris">
+    <title>Lenawei Safaris - Explore • Learn • Experience</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 </head>
 <body>
     <header>
-        <h1>Welcome to Lenawei Safaris</h1>
-        <nav>
-            <button class="tab-button" data-section="itineraries">Itineraries</button>
-            <button class="tab-button" data-section="testimonials">Testimonials</button>
-            <button class="tab-button" data-section="safari-map">Safari Map</button>
-            <button class="tab-button" data-section="team">Meet Our Team</button>
-            <button class="tab-button" data-section="games">Games & Activities</button>
-            <button class="tab-button" data-section="faqs">FAQs</button>
-            <button class="tab-button" data-section="contact">Contact Us</button>
-        </nav>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/logo.svg" alt="Lenawei Safaris Logo" class="logo-img">
+                <div class="company-info">
+                    <h1 class="company-name">Lenawei Safaris</h1>
+                    <p class="company-tagline">Explore • Learn • Experience</p>
+                </div>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar" id="navbar">
+                <button class="tab-button" data-section="home">Home</button>
+                <button class="tab-button" data-section="services">Services</button>
+                <button class="tab-button" data-section="itineraries">Safari Packages</button>
+                <button class="tab-button" data-section="transportation">Transportation</button>
+                <button class="tab-button" data-section="accommodations">Accommodations</button>
+                <button class="tab-button" data-section="testimonials">Testimonials</button>
+                <button class="tab-button" data-section="safari-map">Safari Map</button>
+                <button class="tab-button" data-section="team">Our Team</button>
+                <button class="tab-button" data-section="faqs">FAQs</button>
+                <button class="tab-button" data-section="contact">Contact</button>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Itineraries Section -->
-        <section id="itineraries" class="content-section">
-            <h2>Safari Itineraries</h2>
-            <p>Explore our exciting safari packages:</p>
-            <ul>
-                <li><strong>3-Day Safari:</strong> Nairobi - Amboseli - Tsavo - Return</li>
-                <li><strong>5-Day Safari:</strong> Nairobi - Masai Mara - Lake Nakuru - Return</li>
-                <li><strong>7-Day Safari:</strong> Ultimate Kenya Wildlife Experience</li>
-            </ul>
+        <!-- Home/Hero Section -->
+        <section id="home" class="content-section hero-section">
+            <div class="hero-content">
+                <h2>Welcome to Lenawei Safaris</h2>
+                <p class="hero-subtitle">Your Complete Travel & Tourism Solution</p>
+                <p class="hero-description">Experience unforgettable adventures across East Africa with Kenya's most trusted travel company. From wildlife safaris to seamless travel arrangements, we handle every detail of your journey.</p>
+                
+                <div class="hero-buttons">
+                    <button class="cta-button primary-btn" onclick="document.querySelector('[data-section=\"itineraries\"]').click()">Book a Safari</button>
+                    <button class="cta-button secondary-btn" onclick="document.querySelector('[data-section=\"contact\"]').click()">Contact Us</button>
+                </div>
+
+                <div class="hero-features">
+                    <div class="feature-box">
+                        <span class="feature-icon">✈️</span>
+                        <h3>Flights & Travel</h3>
+                        <p>International & domestic flights</p>
+                    </div>
+                    <div class="feature-box">
+                        <span class="feature-icon">🦁</span>
+                        <h3>Safari Tours</h3>
+                        <p>Incredible wildlife experiences</p>
+                    </div>
+                    <div class="feature-box">
+                        <span class="feature-icon">🏨</span>
+                        <h3>Accommodations</h3>
+                        <p>Luxury to budget-friendly stays</p>
+                    </div>
+                    <div class="feature-box">
+                        <span class="feature-icon">🚗</span>
+                        <h3>Ground Transport</h3>
+                        <p>Safe & comfortable transfers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="services" class="content-section services-section">
+            <div class="section-header">
+                <h2>🎯 Our Comprehensive Services</h2>
+                <p class="section-subtitle">At Lenawei Safaris, we are your one-stop travel and tourism solution, offering exceptional services across all travel needs:</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">✈️</div>
+                    <h3>Flight Bookings</h3>
+                    <p>Competitive flight arrangements to domestic and international destinations. We partner with major airlines to offer you the best rates and flexible booking options for your journey.</p>
+                    <ul>
+                        <li>Domestic & International Flights</li>
+                        <li>Charter Services Available</li>
+                        <li>Travel Insurance Included</li>
+                        <li>24/7 Booking Support</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚂</div>
+                    <h3>Rail Services</h3>
+                    <p>Experience Kenya's most scenic railway journeys. From the famous Lunatic Express to modern express trains, we arrange comfortable rail travel with premium seating options.</p>
+                    <ul>
+                        <li>Standard & Luxury Train Packages</li>
+                        <li>Historical Scenic Routes</li>
+                        <li>Meal & Beverage Services</li>
+                        <li>Guided Commentary Included</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚢</div>
+                    <h3>Cruise & Ship Services</h3>
+                    <p>Explore East Africa's coastal beauty with our cruise and ship packages. Perfect for beach getaways, island hopping, and luxury maritime experiences.</p>
+                    <ul>
+                        <li>Coastal Cruise Packages</li>
+                        <li>Island Hopping Tours</li>
+                        <li>Luxury Ship Accommodations</li>
+                        <li>Water Sports Activities</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚍</div>
+                    <h3>Ground Transportation & Chopas</h3>
+                    <p>Professional vehicle rental and chauffeured services. Our fleet includes comfortable 4x4s, minibuses, and coaches for safari tours and general transportation needs.</p>
+                    <ul>
+                        <li>4x4 Safari Vehicles</li>
+                        <li>Minibus & Coach Rentals</li>
+                        <li>Airport Transfers</li>
+                        <li>Professional Drivers & Guides</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏨</div>
+                    <h3>Hotel & Accommodation Booking</h3>
+                    <p>Access to over 500+ verified hotels, lodges, and resorts across Kenya. From luxury 5-star properties to budget-friendly options, we find the perfect accommodation for your needs.</p>
+                    <ul>
+                        <li>Budget to Luxury Properties</li>
+                        <li>Safari Lodges & Tented Camps</li>
+                        <li>Beach Resorts & Urban Hotels</li>
+                        <li>Best Rate Guarantee</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🦁</div>
+                    <h3>Wildlife Tours & Safari Packages</h3>
+                    <p>Expertly curated wildlife safaris in Kenya's most iconic parks. Experience the Big Five and Africa's incredible biodiversity with our experienced naturalist guides.</p>
+                    <ul>
+                        <li>Masai Mara Wildlife Safari</li>
+                        <li>Amboseli & Tsavo Parks</li>
+                        <li>Lake Nakuru & Great Rift Valley</li>
+                        <li>Customized Safari Itineraries</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🗺️</div>
+                    <h3>Travel Planning & Agency Services</h3>
+                    <p>Full-service travel agent support for complete trip coordination. From visa assistance to itinerary planning, we handle every detail of your journey.</p>
+                    <ul>
+                        <li>Complete Trip Coordination</li>
+                        <li>Visa & Documentation Support</li>
+                        <li>Travel Insurance Services</li>
+                        <li>Emergency Travel Assistance</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛫</div>
+                    <h3>Airport & Ground Transfers</h3>
+                    <p>Seamless airport transfers with professional drivers. Meet-and-greet services, luggage handling, and comfortable vehicles for stress-free arrivals and departures.</p>
+                    <ul>
+                        <li>Meet & Greet Services</li>
+                        <li>Luggage Assistance</li>
+                        <li>Scheduled & On-Demand Transfers</li>
+                        <li>All Major Airports Covered</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safari Packages Section -->
+        <section id="itineraries" class="content-section itineraries-section">
+            <div class="section-header">
+                <h2>🎒 Safari Packages & Itineraries</h2>
+                <p class="section-subtitle">Choose from our expertly designed safari packages or let us customize one for your group:</p>
+            </div>
+            
+            <div class="itinerary-cards">
+                <div class="itinerary-card">
+                    <div class="itinerary-badge">Budget Friendly</div>
+                    <h3>🌟 3-Day Classic Safari</h3>
+                    <p class="itinerary-duration"><strong>Duration:</strong> 3 Days / 2 Nights</p>
+                    <p class="itinerary-route"><strong>Route:</strong> Nairobi → Amboseli National Park → Tsavo East → Nairobi</p>
+                    <p><strong>Highlights:</strong></p>
+                    <ul>
+                        <li>Mount Kilimanjaro Views</li>
+                        <li>Elephant & Wildlife Viewing</li>
+                        <li>Full Board Meals</li>
+                        <li>Professional Naturalist Guide</li>
+                        <li>Game Drives (Morning & Afternoon)</li>
+                    </ul>
+                    <div class="itinerary-footer">
+                        <p class="itinerary-price">From KES 45,000</p>
+                        <button class="book-btn" onclick="bookSafari('3-Day Classic Safari')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="itinerary-card featured">
+                    <div class="itinerary-badge popular">Most Popular</div>
+                    <h3>⭐⭐ 5-Day Masai Mara Adventure</h3>
+                    <p class="itinerary-duration"><strong>Duration:</strong> 5 Days / 4 Nights</p>
+                    <p class="itinerary-route"><strong>Route:</strong> Nairobi → Masai Mara → Lake Nakuru → Nairobi</p>
+                    <p><strong>Highlights:</strong></p>
+                    <ul>
+                        <li>Big Five Wildlife Viewing</li>
+                        <li>Masai Mara Game Reserve</li>
+                        <li>Lake Nakuru Flamingos</li>
+                        <li>Maasai Village Cultural Visit</li>
+                        <li>Photography Safaris Included</li>
+                    </ul>
+                    <div class="itinerary-footer">
+                        <p class="itinerary-price">From KES 75,000</p>
+                        <button class="book-btn" onclick="bookSafari('5-Day Masai Mara Adventure')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="itinerary-card">
+                    <div class="itinerary-badge">Premium</div>
+                    <h3>⭐⭐⭐ 7-Day Ultimate Kenya Experience</h3>
+                    <p class="itinerary-duration"><strong>Duration:</strong> 7 Days / 6 Nights</p>
+                    <p class="itinerary-route"><strong>Route:</strong> Complete Kenyan Wildlife Circle</p>
+                    <p><strong>Highlights:</strong></p>
+                    <ul>
+                        <li>All Major National Parks</li>
+                        <li>Premium Luxury Accommodations</li>
+                        <li>Private Vehicle & Guide</li>
+                        <li>Cultural Experiences</li>
+                        <li>Professional Photography Guidance</li>
+                    </ul>
+                    <div class="itinerary-footer">
+                        <p class="itinerary-price">From KES 120,000</p>
+                        <button class="book-btn" onclick="bookSafari('7-Day Ultimate Kenya Experience')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="itinerary-card">
+                    <div class="itinerary-badge">Luxury</div>
+                    <h3>🏝️ 10-Day Safari & Beach Combo</h3>
+                    <p class="itinerary-duration"><strong>Duration:</strong> 10 Days / 9 Nights</p>
+                    <p class="itinerary-route"><strong>Route:</strong> Wildlife Safari + Coastal Paradise</p>
+                    <p><strong>Highlights:</strong></p>
+                    <ul>
+                        <li>Safari Portion (5 Days)</li>
+                        <li>Beach Resort (5 Days)</li>
+                        <li>Water Sports Activities</li>
+                        <li>Island Excursions</li>
+                        <li>All-Inclusive Meals</li>
+                    </ul>
+                    <div class="itinerary-footer">
+                        <p class="itinerary-price">From KES 150,000</p>
+                        <button class="book-btn" onclick="bookSafari('10-Day Safari & Beach Combo')">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-itinerary">
+                <h3>Don't See What You're Looking For?</h3>
+                <p>We offer fully customized safari packages tailored to your preferences, budget, and interests. Contact us to create your perfect itinerary!</p>
+                <button class="cta-button primary-btn" onclick="document.querySelector('[data-section=\"contact\"]').click()">Create Custom Itinerary</button>
+            </div>
+        </section>
+
+        <!-- Transportation Section -->
+        <section id="transportation" class="content-section">
+            <div class="section-header">
+                <h2>🚗 Transportation & Fleet Services</h2>
+                <p class="section-subtitle">Our modern, well-maintained fleet ensures comfortable and safe journeys across Kenya:</p>
+            </div>
+            
+            <div class="fleet-grid">
+                <div class="fleet-card">
+                    <div class="fleet-icon">🚙</div>
+                    <h3>4x4 Safari Vehicles</h3>
+                    <p>Purpose-built safari vehicles with pop-up roofs for optimal wildlife viewing. Comfortable seating for 4-6 passengers with experienced drivers.</p>
+                    <ul>
+                        <li>Roof Hatches for Photography</li>
+                        <li>Air Conditioning & Heating</li>
+                        <li>GPS Navigation & Communication</li>
+                        <li>First Aid & Safety Equipment</li>
+                        <li>Binoculars & Field Guides Provided</li>
+                    </ul>
+                </div>
+
+                <div class="fleet-card">
+                    <div class="fleet-icon">🚌</div>
+                    <h3>Minibus & Chopa Services</h3>
+                    <p>Comfortable minibuses for group tours and airport transfers. Seating for 12-14 passengers with professional drivers and excellent safety records.</p>
+                    <ul>
+                        <li>Comfortable Reclining Seats</li>
+                        <li>Air Conditioning</li>
+                        <li>Entertainment Systems</li>
+                        <li>Radio & Communication Equipment</li>
+                        <li>Experienced Drivers</li>
+                    </ul>
+                </div>
+
+                <div class="fleet-card">
+                    <div class="fleet-icon">🚍</div>
+                    <h3>Full-Size Coach Services</h3>
+                    <p>Large group transportation for 40+ passengers. Ideal for corporate events, school trips, and large tour groups with onboard amenities.</p>
+                    <ul>
+                        <li>Luxury Seating Arrangements</li>
+                        <li>Onboard Toilet Facilities</li>
+                        <li>Entertainment & WiFi</li>
+                        <li>Professional Coaching Team</li>
+                        <li>Group Meal Coordination</li>
+                    </ul>
+                </div>
+
+                <div class="fleet-card">
+                    <div class="fleet-icon">🚗</div>
+                    <h3>Sedan & SUV Rentals</h3>
+                    <p>Chauffeur-driven luxury vehicles for discerning travelers. Premium comfort for city tours, airport transfers, and executive travel.</p>
+                    <ul>
+                        <li>Premium Leather Interiors</li>
+                        <li>Climate Control</li>
+                        <li>Professional Drivers</li>
+                        <li>Business Amenities</li>
+                        <li>Complimentary WiFi & Refreshments</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="transport-stats">
+                <div class="stat-box">
+                    <h4>500+</h4>
+                    <p>Happy Customers Annually</p>
+                </div>
+                <div class="stat-box">
+                    <h4>50+</h4>
+                    <p>Vehicles in Fleet</p>
+                </div>
+                <div class="stat-box">
+                    <h4>20+</h4>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-box">
+                    <h4>100%</h4>
+                    <p>Safety Record</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accommodations Section -->
+        <section id="accommodations" class="content-section">
+            <div class="section-header">
+                <h2>🏨 Hotel & Accommodation Partnerships</h2>
+                <p class="section-subtitle">We partner with the finest hotels, lodges, and resorts across Kenya to ensure your perfect stay:</p>
+            </div>
+            
+            <div class="accommodation-grid">
+                <div class="accommodation-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <h3>Luxury 5-Star Properties</h3>
+                    <p>Premium accommodations in Nairobi, Masai Mara, and coastal destinations. World-class amenities, gourmet dining, and spa services.</p>
+                    <ul>
+                        <li>Private Villas & Suites</li>
+                        <li>Michelin-Quality Dining</li>
+                        <li>Full-Service Spas</li>
+                        <li>Concierge Services</li>
+                        <li>Room Service 24/7</li>
+                    </ul>
+                </div>
+
+                <div class="accommodation-card">
+                    <div class="stars">⭐���⭐⭐</div>
+                    <h3>Upscale Safari Lodges</h3>
+                    <p>Comfortable safari lodges with stunning wildlife views. Perfect balance of luxury and authenticity for the ultimate safari experience.</p>
+                    <ul>
+                        <li>En-Suite Game Viewing</li>
+                        <li>Fine Dining Restaurants</li>
+                        <li>Wildlife Photography Guides</li>
+                        <li>Bush Dinner Experiences</li>
+                        <li>Naturalist-Led Game Walks</li>
+                    </ul>
+                </div>
+
+                <div class="accommodation-card">
+                    <div class="stars">⭐⭐⭐⭐</div>
+                    <h3>🏕️ Tented Safari Camps</h3>
+                    <p>Immersive camping experiences with modern comforts. Wake up to wildlife sounds in luxury safari tents with all amenities.</p>
+                    <ul>
+                        <li>Luxury Canvas Tents</li>
+                        <li>Ensuite Bathrooms</li>
+                        <li>Campfire Experiences</li>
+                        <li>Naturalist-Led Walks</li>
+                        <li>Authentic Safari Experience</li>
+                    </ul>
+                </div>
+
+                <div class="accommodation-card">
+                    <div class="stars">⭐⭐⭐</div>
+                    <h3>Mid-Range Hotel Properties</h3>
+                    <p>Quality accommodations with excellent service at reasonable prices. Great for budget-conscious travelers without compromising comfort.</p>
+                    <ul>
+                        <li>Comfortable Private Rooms</li>
+                        <li>Restaurant & Bar</li>
+                        <li>Business Centers</li>
+                        <li>WiFi & Entertainment</li>
+                        <li>Free Breakfast Options</li>
+                    </ul>
+                </div>
+
+                <div class="accommodation-card">
+                    <div class="stars">⭐⭐⭐⭐</div>
+                    <h3>🏖️ Beachfront Resorts</h3>
+                    <p>Stunning beach properties in Mombasa and Zanzibar. Water sports, diving, and tropical relaxation at their finest.</p>
+                    <ul>
+                        <li>Private Beach Access</li>
+                        <li>Water Sports Facilities</li>
+                        <li>Diving & Snorkeling</li>
+                        <li>All-Inclusive Options</li>
+                        <li>Beach Bar & Restaurants</li>
+                    </ul>
+                </div>
+
+                <div class="accommodation-card">
+                    <div class="stars">⭐⭐</div>
+                    <h3>💰 Budget-Friendly Options</h3>
+                    <p>Affordable, clean accommodations for budget travelers. No compromise on safety or basic amenities.</p>
+                    <ul>
+                        <li>Private & Dorm Rooms</li>
+                        <li>Community Kitchens</li>
+                        <li>Traveler Facilities</li>
+                        <li>Social Lounges</li>
+                        <li>Tour Desk Services</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- Testimonials Section -->
         <section id="testimonials" class="content-section">
-            <h2>What Our Guests Say</h2>
-            <blockquote>"An unforgettable safari experience! Highly recommended!" – John Doe</blockquote>
-            <blockquote>"The best guided tour I’ve ever had! Lenawei Safaris is top-notch!" – Mary A.</blockquote>
+            <div class="section-header">
+                <h2>💬 What Our Guests Say</h2>
+                <p class="section-subtitle">Real experiences from real travelers who have explored with us</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"An absolutely unforgettable safari experience! Lenawei Safaris exceeded all our expectations. The guides were knowledgeable, the vehicles were comfortable, and the accommodations were spectacular. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <strong>John Doe</strong>
+                        <span class="author-title">Safari Enthusiast</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The best guided tour I've ever had! Lenawei Safaris is truly top-notch. From flight bookings to hotel arrangements, everything was handled professionally. We felt like VIPs throughout our journey!"</p>
+                    <div class="testimonial-author">
+                        <strong>Mary A.</strong>
+                        <span class="author-title">Travel Blogger</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"I was amazed by the attention to detail and personalized service. The team went above and beyond to make our family vacation perfect. The airport transfers were seamless, and the safari guides were incredible!"</p>
+                    <div class="testimonial-author">
+                        <strong>Robert Johnson</strong>
+                        <span class="author-title">Family Traveler</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Outstanding service! We booked our complete trip through Lenawei – flights, hotels, safari, and beach resort. Everything coordinated perfectly. Can't wait to return!"</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Williams</strong>
+                        <span class="author-title">Frequent Traveler</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Safari Map Section -->
         <section id="safari-map" class="content-section">
-            <h2>Safari Map</h2>
-            <img src="images/safari-map.jpg" alt="Safari Map" class="map-image">
+            <div class="section-header">
+                <h2>🗺️ Safari Destinations & Maps</h2>
+                <p class="section-subtitle">Explore Kenya's most iconic wildlife destinations</p>
+            </div>
+            
+            <img src="images/safari-map.jpg" alt="Kenya Safari Map showing all major destinations" class="map-image">
+            <p class="map-destinations"><strong>Featured Destinations:</strong> Masai Mara • Amboseli • Tsavo • Lake Nakuru • Great Rift Valley • Mount Kenya • Coastal Regions</p>
         </section>
 
         <!-- Meet Our Team Section -->
         <section id="team" class="content-section">
-            <h2>Meet Our Team</h2>
-            <p>Our experienced safari guides ensure an unforgettable adventure.</p>
-            <ul>
-                <li><strong>Lucas Bell</strong> – Lead Safari Guide</li>
-                <li><strong>Jane Wambui</strong> – Wildlife Expert</li>
-                <li><strong>David Kimani</strong> – Tour Planner</li>
-            </ul>
-        </section>
+            <div class="section-header">
+                <h2>👥 Meet Our Experienced Team</h2>
+                <p class="section-subtitle">Our dedicated professionals bring decades of combined experience in travel, tourism, wildlife, and hospitality. Each team member is passionate about creating unforgettable experiences.</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">👨‍💼</div>
+                    <h3>Lucas Bell</h3>
+                    <p class="member-title">Founder & Lead Guide</p>
+                    <p class="bio">With 20+ years of safari guiding experience, Lucas is passionate about wildlife conservation and providing exceptional guest experiences. He personally oversees all major safari expeditions and ensures premium service standards. His extensive knowledge of East African ecosystems is unmatched.</p>
+                    <p class="expertise"><strong>Expertise:</strong> Wildlife Photography • Naturalist Guiding • Safari Operations • Wildlife Conservation</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/belllucas34" target="_blank" class="social-btn instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
 
-        <!-- Games & Activities Section -->
-        <section id="games" class="content-section">
-            <h2>Games & Activities</h2>
-            <p>Enjoy fun safari-related puzzles, quizzes, and challenges!</p>
-            <button onclick="alert('Coming Soon!')">Play a Quiz</button>
+                <div class="team-member">
+                    <div class="member-avatar">👩‍💼</div>
+                    <h3>Pauline Tamara</h3>
+                    <p class="member-title">Guest Relations & Logistics Manager</p>
+                    <p class="bio">Pauline is the heartbeat of our customer service team. With her warm personality and meticulous attention to detail, she ensures every guest receives personalized attention. She coordinates hotel bookings, accommodations, and guest communications with precision and care. Her problem-solving skills are exceptional.</p>
+                    <p class="expertise"><strong>Expertise:</strong> Customer Service • Booking Coordination • Group Management • VIP Relations</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/ptama_rah" target="_blank" class="social-btn instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">👨‍✈️</div>
+                    <h3>Titus Gitonga</h3>
+                    <p class="member-title">Safari Operations Manager</p>
+                    <p class="bio">Titus manages our entire fleet operations and safari logistics with military precision. His organizational expertise ensures that every vehicle is maintained to the highest standards and every safari runs like clockwork. Safety and comfort are his top priorities, and his team respects his leadership.</p>
+                    <p class="expertise"><strong>Expertise:</strong> Fleet Management • Operations • Vehicle Maintenance • Logistics Planning</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/to.sh342" target="_blank" class="social-btn instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">👨‍🦓</div>
+                    <h3>Jackson Wachiuri</h3>
+                    <p class="member-title">Senior Safari Guide & Naturalist</p>
+                    <p class="bio">Jackson is a certified naturalist with extensive knowledge of East African wildlife and ecosystems. His storytelling abilities and eagle eye for spotting wildlife make every game drive an educational adventure. He's fluent in English, Swahili, and French, and his passion for conservation is infectious.</p>
+                    <p class="expertise"><strong>Expertise:</strong> Wildlife Biology • Tracking • Bird Watching • Cultural Heritage • Language Skills</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/jacksonescapes" target="_blank" class="social-btn instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">👩‍🔬</div>
+                    <h3>Lucy Kago</h3>
+                    <p class="member-title">Wildlife Conservationist & Environmental Specialist</p>
+                    <p class="bio">Lucy is dedicated to wildlife conservation and sustainable tourism practices. She educates guests about conservation efforts, endangered species, and how tourism supports environmental protection. She partners with conservation organizations throughout Kenya and actively participates in research projects.</p>
+                    <p class="expertise"><strong>Expertise:</strong> Wildlife Conservation • Environmental Education • Sustainability • Research</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/lucy_kagoh" target="_blank" class="social-btn instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">💻</div>
+                    <h3>Travel Specialists Team</h3>
+                    <p class="member-title">Flight, Rail & Transportation Booking Team</p>
+                    <p class="bio">Our dedicated team of travel specialists handles all flight bookings, rail arrangements, and ground transportation coordination. They stay updated on the latest fares, schedules, and travel requirements to get you the best deals. With access to major GDS systems, they provide comprehensive travel solutions.</p>
+                    <p class="expertise"><strong>Expertise:</strong> Airline Partnerships • Rail Bookings • Ground Transportation • Visa Assistance • Fare Optimization</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">🚗</div>
+                    <h3>Professional Drivers & Escorts</h3>
+                    <p class="member-title">Certified Transportation Team</p>
+                    <p class="bio">All our drivers are certified, background-checked, and trained in advanced driving techniques and first aid. They are courteous, knowledgeable about Kenya's routes, and dedicated to safe, comfortable travel experiences. Each driver undergoes continuous professional development.</p>
+                    <p class="expertise"><strong>Expertise:</strong> Vehicle Operation • Route Navigation • Safety Protocols • Customer Service • Emergency Response</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">🏨</div>
+                    <h3>Hotel Partnership Coordinators</h3>
+                    <p class="member-title">Accommodation Specialists</p>
+                    <p class="bio">Our hotel coordinators have established relationships with 500+ properties across Kenya. They negotiate best rates, handle special requests, and ensure you get the perfect accommodation that matches your preferences and budget. They're available 24/7 for guest support.</p>
+                    <p class="expertise"><strong>Expertise:</strong> Hotel Selection • Rate Negotiation • Special Arrangements • Guest Preferences • Quality Assurance</p>
+                </div>
+            </div>
         </section>
 
         <!-- FAQs Section -->
         <section id="faqs" class="content-section">
-            <h2>Frequently Asked Questions</h2>
-            <p><strong>Q: What is the best time for a safari?</strong></p>
-            <p>A: The best time is during the dry season (June to October) when wildlife is easier to spot.</p>
+            <div class="section-header">
+                <h2>❓ Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about our services and safari packages</p>
+            </div>
             
-            <p><strong>Q: Do I need vaccinations before traveling?</strong></p>
-            <p>A: Yes, we recommend Yellow Fever and Malaria vaccinations.</p>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>🎒 What is the best time for a safari?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <p class="faq-content">The best time is during the dry seasons: June to October (longer dry season) and January to March (shorter dry season). During these periods, wildlife is easier to spot as animals congregate around remaining water sources. However, each season offers unique experiences and advantages. The green season (November-May) offers lush landscapes and bird watching opportunities.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>💉 Do I need vaccinations before traveling?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <p class="faq-content">Yes, we strongly recommend Yellow Fever and Malaria vaccinations. Typhoid, Tetanus, and Hepatitis A/B vaccinations are also advisable. We recommend consulting your doctor 4-6 weeks before travel. We can provide vaccination center recommendations and documentation. Travel insurance with medical coverage is also highly recommended.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>📄 What documents do I need?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <p class="faq-content">A valid passport (6+ months validity), visa (if required), travel insurance, vaccination certificates, and copies of important documents. We provide complete visa assistance and documentation support. We recommend keeping digital copies of all documents in a secure location.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>💰 What's included in the safari package?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <p class="faq-content">Packages typically include transportation, accommodation, meals, professional guides, park entrance fees, and game drives. Specific inclusions vary by package. We offer detailed itineraries with clear breakdowns of all included services. International flights may be booked separately unless specified in your package.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>🔒 Is safari travel safe?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <p class="faq-content">Yes, safari travel is generally safe when conducted with professional operators. We employ experienced guides, maintain strict safety protocols, provide comprehensive travel insurance, and operate within national park regulations. Safety is our top priority. We follow all government safety guidelines and maintain excellent safety records.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>👨‍👩‍👧‍👦 Are safaris suitable for families with children?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <p class="faq-content">Absolutely! We offer family-friendly safari packages with accommodations suitable for children. Our guides are experienced in working with families and adapt activities to children's interests and abilities. We recommend age 6+ for traditional safaris, though we can arrange special accommodations for younger children.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>✈️ How do I book flights through you?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <p class="faq-content">Contact our booking team with your travel dates and requirements. We'll search multiple airlines, provide quotes, and handle all arrangements including seat selection, luggage, and special requests. We have partnerships with major airlines for competitive fares.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>🏨 Can you help with hotel bookings?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <p class="faq-content">Yes! We partner with 500+ hotels, lodges, and resorts. We can arrange any accommodation from luxury 5-star to budget-friendly options and often secure exclusive discounts. We provide detailed property information, photos, and guest reviews.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>🚗 Do you provide airport transfers?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <p class="faq-content">Yes, we offer professional airport transfers with meet-and-greet services. Our drivers hold welcome signs, assist with luggage, and ensure comfortable, punctual arrival at your destination. We cover all major airports in Kenya including JKIA, Mombasa, and Kisumu airports.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>❌ What's your cancellation policy?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <p class="faq-content">Our cancellation policy is flexible: cancel 30+ days before travel for full refund, 15-30 days for 75% refund, 7-14 days for 50% refund. Travel insurance can provide additional protection. We also offer date change options. Review specific package terms for details.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>💬 What languages do your guides speak?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <p class="faq-content">Our guides are fluent in English and Swahili. Many also speak French, German, Spanish, and other languages. We can arrange guides in your preferred language with advance notice. We maintain a diverse team to serve international guests.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>📞 How can I contact you for custom itineraries?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <p class="faq-content">Contact us via email, phone, WhatsApp, or our website contact form. Our travel specialists will discuss your preferences, budget, and requirements to create your perfect custom itinerary. We're available 24/7 for consultations.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Contact Us Section -->
         <section id="contact" class="content-section">
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:info@lenaweisafaris.com">info@lenaweisafaris.com</a></p>
-            <p>Phone: +254 712 345 678</p>
-            <p>Follow us on <a href="https://www.instagram.com/belllucas34" target="_blank">Instagram</a> and <a href="https://www.facebook.com/Lucas Bell" target="_blank">Facebook</a></p>
+            <div class="section-header">
+                <h2>📞 Contact Us - Get in Touch Today!</h2>
+                <p class="section-subtitle">We're here to help you plan your perfect safari adventure</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@lenaweisafaris.com">info@lenaweisafaris.com</a></p>
+                        <p><a href="mailto:bookings@lenaweisafaris.com">bookings@lenaweisafaris.com</a></p>
+                        <p><a href="mailto:support@lenaweisafaris.com">support@lenaweisafaris.com</a></p>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">📱</div>
+                        <h3>Phone & WhatsApp</h3>
+                        <p>Main Line: <a href="tel:+254712345678">+254 712 345 678</a></p>
+                        <p>WhatsApp: <a href="https://wa.me/254712345678">+254 712 345 678</a></p>
+                        <p>Booking Hotline: <a href="tel:+254720987654">+254 720 987 654</a></p>
+                        <p class="small-text">Available 24/7 for urgent inquiries</p>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">🏢</div>
+                        <h3>Office Address</h3>
+                        <p>Lenawei Safaris<br>123 Travel Hub, Nairobi, Kenya</p>
+                        <p><strong>Operating Hours:</strong><br>Mon-Sun, 08:00 - 18:00 EAT</p>
+                        <p><strong>Emergency Support:</strong> 24/7 Available</p>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">🌐</div>
+                        <h3>Social Media & Online</h3>
+                        <p><strong>Instagram:</strong><br>
+                            <a href="https://www.instagram.com/belllucas34" target="_blank">@belllucas34</a> | 
+                            <a href="https://www.instagram.com/lenaweisafaris" target="_blank">@lenaweisafaris</a>
+                        </p>
+                        <p><strong>Facebook:</strong><br>
+                            <a href="https://www.facebook.com/lenaweisafaris" target="_blank">Lenawei Safaris</a>
+                        </p>
+                        <p><strong>Website:</strong> www.lenaweisafaris.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <h3>Send Us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Full Name" id="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email Address" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Your Phone Number" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <select id="serviceInterest" required>
+                                <option value="">Select Service Interest</option>
+                                <option value="safari">Safari Package</option>
+                                <option value="flights">Flight Booking</option>
+                                <option value="hotel">Hotel Reservation</option>
+                                <option value="transport">Transportation</option>
+                                <option value="custom">Custom Itinerary</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="travelDate" placeholder="Preferred Travel Date">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell us about your travel plans..." id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button primary-btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Lenawei Safaris. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Lenawei Safaris</h4>
+                <p>Your trusted partner for unforgettable safari adventures and complete travel solutions across East Africa.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#itineraries">Safari Packages</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms & Conditions</a></li>
+                    <li><a href="#booking">Booking Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lenawei Safaris. All rights reserved.</p>
+                <p>Professional Travel Partner | Licensed Tour Operator | Certified Safari Guide Services</p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        // Hide all sections by default
-        document.querySelectorAll(".content-section").forEach(section => {
-            section.style.display = "none";
-        });
-
-        // Button click event to show the correct section
-        document.querySelectorAll(".tab-button").forEach(button => {
-            button.addEventListener("click", function() {
-                let sectionToShow = this.getAttribute("data-section");
-
-                // Hide all sections first
-                document.querySelectorAll(".content-section").forEach(section => {
-                    section.style.display = "none";
-                });
-
-                // Show the selected section
-                document.getElementById(sectionToShow).style.display = "block";
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
